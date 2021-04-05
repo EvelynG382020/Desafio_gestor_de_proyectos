@@ -1,0 +1,31 @@
+<h1>Crear un nuevo proyecto</h1>
+<h5>Debes completar los campos "Nombre del proyecto", "Descripción" y "Estado" para evitar errores</h5>
+<form method="get" action="/form/create" id="create_posts">
+    <div class="form-group">
+        <label for="title">Nombre del proyecto</label>
+        <input name="title" type="text" class="form-control col-5" id="title" placeholder="Ingresa el título del proyecto">
+    </div>
+    <div class="form-group">
+        <label for="description">Descripción del proyecto</label>
+        <textarea name="description" type="text" class="form-control col-5" placeholder="Ingresa la descripción del proyecto"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="start_date">Fecha de inicio del proyecto</label>
+        <input name="start_date" type="date" class="form-control col-3">
+    </div>
+    <div class="form-group">
+        <label for="deadline">Fecha final del proyecto</label>
+        <input name="deadline" type="date" class="form-control col-3">
+    </div>
+    <div class="input-group">
+        <select name="state" class="custom-select col-3" id="inputGroupSelect04">
+            <option selected>Seleccionar estado del proyecto</option>
+            <option value="Propuesta">Propuesta</option>
+            <option value="En progreso">En progreso</option>
+            <option value="Terminado">Terminado</option>
+        </select>
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary mt-3">Crear Proyecto</button>
+</form>

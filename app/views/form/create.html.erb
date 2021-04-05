@@ -1,0 +1,17 @@
+<% if @project.errors.any? %>
+    <div id="error_explanation">
+        <h2>
+            <%= pluralize(@project.errors.count, "error") %> 
+            prohibited this user from being saved:
+        </h2>
+        <ul>    
+        <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li> <% end %>
+        </ul>
+    </div>
+    <%= link_to 'Try again', form_new_path %>
+<% else %>
+<h1> Has creado el proyecto con éxito </h1>
+<%= link_to 'Crear nuevo proyecto', form_new_path %> 
+<% end %>
+ 
